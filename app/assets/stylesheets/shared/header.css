@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 10vh;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-left {
+  line-height: 100%;
+}
+
