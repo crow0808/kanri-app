@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+.second-header {
+  height: 10vh;
+  width: 90vw;
+  border-bottom: 2px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 5vw;
+}
+
+.second-header-main {
+  line-height: 100%;
+  font-size: 40px;
+}
+
