@@ -1,0 +1,29 @@
+.header {
+  height: 12vh;
+  width: 90vw;
+  border-bottom: 2px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 5vw;
+}
+
+.header-left {
+  line-height: 100%;
+  font-size: 40px;
+}
+
+.header-center-room{
+  font-size: 14px;
+}
+
+.header-right-user{
+  font-size: 14px;
+}
+
+.header-right-user_name {
+  text-decoration: none;
+  color: #333333;
+  font-size: 20px;
+  font-weight: bold;
+}

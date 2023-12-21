@@ -1,0 +1,40 @@
+<%= render "shared/second-header"%>
+
+<div class="user-main">
+  <div class="user-page-left">
+    <%= link_to image_tag("user-image.jpg", class:"user-page-image"), "#" %>
+  </div>
+
+  <%= form_with model: @user, url: user_registration_path, class: 'registration-form-main', local: true do |f| %>
+
+    <div class="user-form-header">新規登録</div>
+
+    <%= render "devise/shared/error_messages", model: f.object %>
+
+    <div class="field">
+      <label class="form-text">ニックネーム</label>
+      <%= f.text_area :name, class:"input-default", placeholder:"例) 山田太郎", maxlength:"40" %>
+    </div>
+
+    <div class="field">
+      <label class="form-text">メールアドレス</label>
+      <%= f.email_field :email, class:"input-default", placeholder:"PC・携帯どちらでも可", autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <label class="form-text">パスワード</label>
+      <%= f.password_field :password, class:"input-default", placeholder:"6文字以上の半角英数字" %>
+    </div>
+
+    <div class="field">
+      <label class="form-text">パスワード（確認）</label>
+      <%= f.password_field :password_confirmation, class:"input-default", placeholder:"同じパスワードを入力して下さい" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "新規登録", class:"actions-btn" %>
+    </div>
+    <%= render "devise/shared/links" %>
+  <% end %>
+
+</div>
