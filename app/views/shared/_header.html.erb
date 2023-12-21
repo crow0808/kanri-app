@@ -1,14 +1,11 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class='header'>
-  <div class='header-left'>
+<header class="header">
+  <div class="header-left">
     Kanri
   </div>
-  <div class='header-center'>
-    <div class='header-center-room'>ルーム名</div>
-    <div class='header-center-room_name'>中山家</div>
-  </div>
-  <div class='header-right'>
-    <div class='header-right-user'>ユーザー名</div>
-    <div class='header-right-user_name'><%= link_to current_user.name, edit_user_path(current_user) %></div>
-  </div>
+  <div class="header-center-room">ルーム名</div>
+  <div class="header-center-room_name">家族ルーム</div>
+  <div class="header-right-user">ユーザー名</div>
+  <div><%= link_to current_user.name, edit_user_path(current_user), class:"header-right-user_name" %></div>
+
 </header>
