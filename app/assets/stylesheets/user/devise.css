@@ -36,6 +36,7 @@
 .user-form-header {
   font-size: 30px;
   padding-bottom: 10px;
+  color: #735E59;
 }
 
 .field {
@@ -44,7 +45,8 @@
 
 .form-text {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 530;
+  color: #473D38;
 }
 
 .input-default {
@@ -56,6 +58,7 @@
   border-radius: 3px;
   border: 1px solid #ccc;
   font-size: 15px;
+  resize: none;
 }
 
 .actions{
@@ -66,8 +69,8 @@
 
 .actions-btn {
   width: 100%;
-  background: lightgray;
-  border: 2px solid gray;
+  background: #DAD7D6;
+  border: 2px solid #8E8C8C;
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
@@ -77,8 +80,11 @@
 #error_explanation {
   color: red;
   font-size: 15px;
+  font-weight: 500;
 }
 
 .login-flash-message {
   color: red;
+  font-size: 15px;
+  font-weight: 500;
 }
