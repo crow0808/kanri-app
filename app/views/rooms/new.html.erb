@@ -9,6 +9,7 @@
 
     <div class="room-form-header">ルーム作成</div>
 
+    <%= render 'shared/error_messages', model: f.object %>
 
     <div class="field">
       <label class="form-text">ルーム名</label>
@@ -22,10 +23,10 @@
 
     <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
 
-
     <div class="actions">
       <%= f.submit "作成", class:"actions-btn" %>
     </div>
+
     <%= link_to "トップページに戻る", root_path, class: "btn"%>
   <% end %>
 
