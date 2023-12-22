@@ -1,37 +1,32 @@
-<div class='chat-room-form'>
-  <h1>新規チャットルーム</h1>
-  <%= link_to "トップページに戻る", root_path, class: "btn"%>
+<%= render "shared/second-header"%>
 
-  <%=form_with model: @room, local: true do |f|%>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <%= f.label :name, :チャットルーム名, class: 'chat-room-form__label'%>
-      </div>
-      <div class='chat-room-form__field--right'>
-        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
-      </div>
+<div class="room-main">
+  <div class="room-page-left">
+    <%= link_to image_tag("user-image.jpg", class:"room-page-image"), "#" %>
+  </div>
+
+  <%= form_with model: @room, class: 'room-form-main', local: true do |f| %>
+
+    <div class="room-form-header">ルーム作成</div>
+
+
+    <div class="field">
+      <label class="form-text">ルーム名</label>
+      <%= f.text_field :room_name, class:"input-default", placeholder:"ルーム名を入力してください", maxlength:"40" %>
     </div>
-    <div class='chat-room-form__field'>
+
+    <div class="field">
+      <label class="form-text">パスコード</label>
+      <%= f.text_field :room_password, class:"input-default", placeholder:"パスコード" %>
     </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
-      </div>
-      <div class='chat-room-form__field--right'>
-        <select name="room[user_ids][]">
-          <option value="">チャットするユーザーを選択してください</option>
-          <% User.where.not(id: current_user.id).each do |user| %>
-            <option value=<%= user.id %>><%= user.name %></option>
-          <% end %>
-        </select>
-        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
-      </div>
+
+    <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+
+
+    <div class="actions">
+      <%= f.submit "作成", class:"actions-btn" %>
     </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'></div>
-      <div class='chat-room-form__field--right'>
-        <%= f.submit class: 'chat-room-form__action-btn'%>
-      </div>
-    </div>
+    <%= link_to "トップページに戻る", root_path, class: "btn"%>
   <% end %>
+
 </div>
