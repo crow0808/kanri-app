@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: ニックネーム
+      room:
+        room_name: ルーム名
+        room_password: パスコード

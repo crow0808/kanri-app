@@ -1,0 +1,33 @@
+<%= render "shared/second-header"%>
+
+<div class="room-main">
+  <div class="room-page-left">
+    <%= link_to image_tag("user-image.jpg", class:"room-page-image"), "#" %>
+  </div>
+
+  <%= form_with model: @room, class: 'room-form-main', local: true do |f| %>
+
+    <div class="room-form-header">ルーム作成</div>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="field">
+      <label class="form-text">ルーム名</label>
+      <%= f.text_field :room_name, class:"input-default", placeholder:"ルーム名を入力してください", maxlength:"40" %>
+    </div>
+
+    <div class="field">
+      <label class="form-text">パスコード</label>
+      <%= f.text_field :room_password, class:"input-default", placeholder:"パスコード" %>
+    </div>
+
+    <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+
+    <div class="actions">
+      <%= f.submit "作成", class:"actions-btn" %>
+    </div>
+
+    <%= link_to "トップページに戻る", root_path, class: "btn"%>
+  <% end %>
+
+</div>

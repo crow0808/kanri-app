@@ -13,7 +13,7 @@
 
     <div class="field">
       <label class="form-text">ニックネーム</label>
-      <%= f.text_area :name, class:"input-default", placeholder:"例) 山田太郎", maxlength:"40" %>
+      <%= f.text_field :name, class:"input-default", placeholder:"例) 山田太郎", maxlength:"40" %>
     </div>
 
     <div class="field">
@@ -34,6 +34,7 @@
     <div class="actions">
       <%= f.submit "新規登録", class:"actions-btn" %>
     </div>
+    
     <%= render "devise/shared/links" %>
   <% end %>
 

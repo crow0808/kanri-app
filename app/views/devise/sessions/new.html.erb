@@ -9,8 +9,10 @@
 
     <div class="user-form-header">ログイン</div>
 
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
+    <div class="login-flash-message">
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+    </div>
       
     <div class="field">
       <label class="form-text">メールアドレス</label>

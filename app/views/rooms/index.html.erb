@@ -1,0 +1,22 @@
+<%= render "shared/third-header"%>
+
+<div class="room-main">
+  <div class="room-page-left">
+    <%= link_to image_tag("user-image.jpg", class:"room-page-image"), "#" %>
+  </div>
+
+  <div class="room-page-right">
+    <div class="room-create">
+      <%= link_to "ルームを作成", new_room_path %>
+    </div>
+    <div>
+      <%= link_to "ルームに参加", room_join_path(current_user) %>
+    </div>
+    <% current_user.rooms.each do |room| %>
+      <div class="room-name">
+        <%= link_to room.room_name, room_path(room) %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
