@@ -1,0 +1,27 @@
+.third-header {
+  height: 12vh;
+  width: 90vw;
+  border-bottom: 2px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 5vw;
+}
+
+.third-header-left {
+  line-height: 100%;
+  font-size: 40px;
+  color: #473D38;
+}
+
+.third-header-right-user{
+  font-size: 14px;
+  color: #473D38;
+}
+
+.third-header-right-user_name {
+  text-decoration: none;
+  color: #473D38;
+  font-size: 20px;
+  font-weight: bold;
+}

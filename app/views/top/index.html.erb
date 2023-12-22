@@ -1,13 +1,16 @@
-<%= render "shared/header" %>
 
-<div class="top-main">
-  <div class="top-page-left">
-    <%= link_to image_tag("user-image.jpg", class:"top-page-image"), "#" %>
+<%= form_with(url: room_join_path, method: :post) do |f| %>
+  <%= f.label :room_name, "Room Name" %>
+  <%= f.text_field :room_name %>
+
+  <%= f.label :room_password, "Password" %>
+  <%= f.password_field :room_password %>
+
+  <%= f.submit "ルームに参加" %>
+<% end %>
+
+<% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
   </div>
-
-  <div>
-    <%= link_to "ルーム作成", new_room_path %>
-
-  </div>
-
-</div>
+<% end %>
