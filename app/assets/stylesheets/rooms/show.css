@@ -71,3 +71,9 @@
   cursor: pointer;
 }
 
+/* ルームに参加した場合のメッセージ */
+.room-notice {
+  color: red;
+  font-size: 15px;
+  font-weight: 500;
+}

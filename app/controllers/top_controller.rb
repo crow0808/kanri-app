@@ -8,7 +8,7 @@ class TopController < ApplicationController
       current_user.rooms << @room
       redirect_to @room, notice: 'ルームに正常に参加しました'
     else
-      flash[:alert] = 'ルーム名またはパスワードが無効です'
+      flash[:alert] = 'ルーム名またはパスワードが一致しません'
       render :index, status: :unprocessable_entity
     end
   end
