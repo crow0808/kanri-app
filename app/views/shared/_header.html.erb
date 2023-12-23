@@ -4,6 +4,8 @@
   </div>
   <div class="header-center-room">ルーム名</div>
   <div class="header-center-room_name"><%= @room.room_name %></div>
+  <div class="header-center-room-">ルームパス</div>
+  <div class="header-center-room_pass"><%= @room.room_password %></div>
   <div class="header-right-user">ユーザー名</div>
   <div><%= link_to current_user.name, edit_user_path(current_user), class:"header-right-user_name" %></div>
 

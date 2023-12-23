@@ -19,57 +19,6 @@
 
 
 /* ページ右側 */
-.room-form-main {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.room-form-header {
-  font-size: 30px;
-  padding-bottom: 10px;
-  color: #735E59;
-}
-
-.field {
-  margin-top: 5px;
-}
-
-.form-text {
-  font-size: 14px;
-  font-weight: 530;
-  color: #473D38;
-}
-
-.input-default {
-  width: 100%;
-  height: 40px;
-  display: block;
-  margin-top: 5px;
-  padding: 10px 16px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-  resize: none;
-}
-
-.actions{
-  width: 20%;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
-.actions-btn {
-  width: 100%;
-  background: #DAD7D6;
-  border: 2px solid #8E8C8C;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
-}
 
 /* ルームに参加した場合のメッセージ */
 .room-notice {
