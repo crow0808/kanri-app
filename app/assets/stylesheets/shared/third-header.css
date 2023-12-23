@@ -19,9 +19,16 @@
   color: #473D38;
 }
 
-.third-header-right-user_name {
+.third-header-right-user_name a {
   text-decoration: none;
   color: #473D38;
   font-size: 20px;
   font-weight: bold;
 }
+
+.third-header-right-user_name a:hover {
+  color: orange;
+}
+
+
+

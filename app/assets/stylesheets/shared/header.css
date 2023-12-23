@@ -19,8 +19,15 @@
   color: #473D38;
 }
 
-.header-center-room_name {
+.header-center-room_name a {
+  text-decoration: none;
   color: #473D38;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header-center-room_name a:hover {
+  color: orange;
 }
 
 .header-right-user{
@@ -28,9 +35,13 @@
   color: #473D38;
 }
 
-.header-right-user_name {
+.header-right-user_name a {
   text-decoration: none;
   color: #473D38;
   font-size: 20px;
   font-weight: bold;
+}
+
+.header-right-user_name a:hover {
+  color: orange;
 }

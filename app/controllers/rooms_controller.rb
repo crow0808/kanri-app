@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to root_path
+      redirect_to rooms_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -17,6 +17,19 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+  end
+
+  def edit
+    @room = Room.find(params[:id])
+  end
+
+  def update
+    @room = Room.find(params[:id])
+    if @room.update(room_params)
+      redirect_to rooms_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
