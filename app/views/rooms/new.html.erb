@@ -18,7 +18,7 @@
 
     <div class="field">
       <label class="form-text">パスコード</label>
-      <%= f.text_field :room_password, class:"input-default", placeholder:"パスコード" %>
+      <%= f.text_field :room_password, class:"input-default", placeholder:"4桁の半角数字" %>
     </div>
 
     <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
