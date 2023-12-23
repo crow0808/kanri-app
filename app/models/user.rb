@@ -7,5 +7,7 @@ class User < ApplicationRecord
   has_many :room_users
   has_many :rooms, through: :room_users
 
+  validates :password, format: { with: /\A[a-zA-Z0-9]+\z/, message: 'は半角英数字のみ使用できます' }
+
   validates :name, presence: true
 end
