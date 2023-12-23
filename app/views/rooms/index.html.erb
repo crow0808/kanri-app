@@ -8,18 +8,18 @@
   <div class="room-page-right">
         <div class="user-room-header">マイルーム一覧</div>
 
-    <div class="room-page-create-join">
-      <div class="room-create">
-        <%= link_to "ルームを作成", new_room_path, class:"room-btn" %>
+    <div class="room-page-create">
+      <div class="room-btn">
+        <%= link_to "ルームを作成", new_room_path %>
       </div>
-      <div class="room-join">
-        <%= link_to "ルームに参加", room_join_path(current_user), class:"room-btn" %>
+      <div class="room-btn">
+        <%= link_to "ルームに参加", room_join_path(current_user) %>
       </div>
     </div>
 
     <% current_user.rooms.each do |room| %>
       <div class="room-name">
-        <%= link_to room.room_name, room_path(room),class:"room-name-btn" %>
+        <%= link_to room.room_name, room_path(room) %>
       </div>
     <% end %>
   </div>

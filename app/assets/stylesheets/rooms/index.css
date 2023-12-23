@@ -33,13 +33,13 @@
   margin-top: 30px;
 }
 
-.room-page-create-join {
+.room-page-create {
   width: 60%;
   display: flex;
   justify-content: space-around;
 }
 
-.room-btn {
+.room-btn a {
   display: inline-block;
   height: 48px;
   width: 10vw;
@@ -54,7 +54,11 @@
   margin-top: 30px;
 }
 
-.room-name-btn {
+.room-btn a:hover{
+  color: blue;
+}
+
+.room-name a {
   display: inline-block;
   height: 48px;
   width: 10vw;
@@ -67,4 +71,8 @@
   font-size: 14px;
   cursor: pointer;
   margin-top: 30px;
+}
+
+.room-name a:hover{
+  color: blue;
 }

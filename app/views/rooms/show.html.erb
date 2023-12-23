@@ -5,15 +5,15 @@
     <%= link_to image_tag("user-image.jpg", class:"room-page-image"), "#" %>
   </div>
 
-  <div>
+  <div class="room-show-right">
     <% if notice %>
       <div class="room-notice">
         <%= notice %>
       </div>
     <% end %>
-    <div>取説一覧ページ</div>
-    <div>本一覧ページ</div>
-    <div>その他アイテム一覧ページ</div>
+    <div class="room-manual">取説一覧ページ</div>
+    <div class="room-book">本一覧ページ</div>
+    <div class="room-item">その他アイテム一覧ページ</div>
     <%= link_to "ルーム一覧ページ", rooms_path %>
   </div>
 
