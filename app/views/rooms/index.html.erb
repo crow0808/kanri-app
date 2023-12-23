@@ -6,15 +6,20 @@
   </div>
 
   <div class="room-page-right">
-    <div class="room-create">
-      <%= link_to "ルームを作成", new_room_path %>
+        <div class="user-room-header">マイルーム一覧</div>
+
+    <div class="room-page-create-join">
+      <div class="room-create">
+        <%= link_to "ルームを作成", new_room_path, class:"room-btn" %>
+      </div>
+      <div class="room-join">
+        <%= link_to "ルームに参加", room_join_path(current_user), class:"room-btn" %>
+      </div>
     </div>
-    <div>
-      <%= link_to "ルームに参加", room_join_path(current_user) %>
-    </div>
+
     <% current_user.rooms.each do |room| %>
       <div class="room-name">
-        <%= link_to room.room_name, room_path(room) %>
+        <%= link_to room.room_name, room_path(room),class:"room-name-btn" %>
       </div>
     <% end %>
   </div>
