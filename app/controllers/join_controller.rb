@@ -1,4 +1,4 @@
-class TopController < ApplicationController
+class JoinController < ApplicationController
   def index
   end
 
