@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :rooms do
     get 'join', to: 'join#index'
     post 'join', to: 'join#join'
+    resources :manuals, only: [:index, :new, :create]
   end
 end
