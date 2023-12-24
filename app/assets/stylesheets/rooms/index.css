@@ -55,7 +55,7 @@
 }
 
 .room-btn a:hover{
-  color: blue;
+  color: orangered;
 }
 
 .room-name a {
@@ -74,5 +74,5 @@
 }
 
 .room-name a:hover{
-  color: blue;
+  color: orangered;
 }
