@@ -39,6 +39,16 @@
   margin-top: 100px;
 }
 
+.room-manual a {
+  text-decoration: none;
+  color: black;
+}
+
+.room-manual a:hover {
+  color: orangered;
+}
+
+
 .room-book {
   line-height: 48px;
   width: 200px;
