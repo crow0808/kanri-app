@@ -1,5 +1,47 @@
 require 'rails_helper'
 
 RSpec.describe Room, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    @room = FactoryBot.build(:room)
+  end
+
+  describe 'チャットルーム作成' do
+    context '新規作成できる場合' do
+      it 'room_nameとroom_passwordの値が存在すれば作成できる' do
+        expect(@room).to be_valid
+      end
+    end
+    context '新規作成できない場合' do
+      it 'room_nameが空では作成できない' do
+        @room.room_name = ''
+        @room.valid?
+        expect(@room.errors.full_messages).to include('ルーム名を入力してください')
+      end
+      it 'room_passwordが空では作成できない' do
+        @room.room_password = ''
+        @room.valid?
+        expect(@room.errors.full_messages).to include('パスコードを入力してください')
+      end
+      it 'room_passwordが4桁未満では作成できない' do
+        @room.room_password = '123'
+        @room.valid?
+        expect(@room.errors.full_messages).to include('パスコードは4文字の半角数字で入力してください')
+      end
+      it 'room_passwordが5桁以上では作成できない' do
+        @room.room_password = '12345'
+        @room.valid?
+        expect(@room.errors.full_messages).to include('パスコードは4文字の半角数字で入力してください')
+      end
+      it 'room_passwordが全角数字では作成できない' do
+        @room.room_password = '１２３４'
+        @room.valid?
+        expect(@room.errors.full_messages).to include('パスコードは4文字の半角数字で入力してください')
+      end
+      it 'room_passwordが半角数字以外では作成できない' do
+        @room.room_password = '12ab'
+        @room.valid?
+        expect(@room.errors.full_messages).to include('パスコードは4文字の半角数字で入力してください')
+      end
+    end
+  end
 end
