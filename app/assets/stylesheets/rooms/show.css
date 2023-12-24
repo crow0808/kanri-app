@@ -27,6 +27,10 @@
   align-items: center;
 }
 
+.room-notice {
+  padding-top: 60px;
+}
+
 .room-manual {
   line-height: 48px;
   width: 200px;
