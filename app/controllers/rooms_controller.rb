@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_action :set_room, only: [:show, :edit, :update, :destroy]
+
   def index
   end
 
@@ -9,36 +11,36 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to rooms_path
+      redirect_to room_path(@room), notice: 'ルームを作成しました'
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def show
-    @room = Room.find(params[:id])
   end
 
   def edit
-    @room = Room.find(params[:id])
   end
 
   def update
-    @room = Room.find(params[:id])
     if @room.update(room_params)
-      redirect_to rooms_path
+      redirect_to room_path(@room), notice: 'ルームは正常に更新されました'
     else
       render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @room = Room.find(params[:id])
     @room.destroy
-    redirect_to rooms_path
+    redirect_to rooms_path, notice: 'ルームは削除されました'
   end
 
   private
+
+  def set_room
+    @room = Room.find(params[:id])
+  end
 
   def room_params
     params.require(:room).permit(:room_name, :room_password, user_ids: [])
