@@ -6,7 +6,13 @@
   </div>
 
   <div class="room-page-right">
-        <div class="user-room-header">マイルーム一覧</div>
+    <% if notice.present? %>
+      <div class="room-notice">
+        <%= notice %>
+      </div>
+    <% end %>
+    
+    <div class="user-room-header">マイルーム一覧</div>
 
     <div class="room-page-create">
       <div class="room-btn">
