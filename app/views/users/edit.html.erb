@@ -28,7 +28,7 @@
     </div>
     <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: "btn"%>
 
-    <%= link_to "トップページに戻る", root_path, class: "btn"%>
+    <%= link_to "戻る", :back, class: "btn"%>
 
   <% end %>
 </div>

@@ -25,7 +25,7 @@
       <%= f.submit "変更して更新", class: "actions-btn"%>
     </div>
 
-    <%= link_to "ルームへ戻る", room_path %>
+    <%= link_to "戻る", :back %>
 
     <%= link_to "ルームを削除する", room_path(@room), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？", class: "room-destroy-btn" } %>
 
