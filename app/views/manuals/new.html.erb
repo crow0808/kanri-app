@@ -1,0 +1,103 @@
+<%= render "shared/header" %>
+
+
+  <div class="manual-registration-main">
+    <div class="manual-registration-title">取扱説明書の情報を入力</div>
+    <%= form_with model: @manual, url: new_room_manual_path(@room), local: true do |f| %>
+
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示 %>
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 商品画像 %>
+    <div class="manual-image">
+      <div class="manual-image-text">
+        商品画像
+      </div>
+      <div class="manual-image-text-sub">
+        クリックしてファイルをアップロード
+      </div>
+      <%= f.file_field :image, id:"item-image" %>
+    </div>
+    <%# /商品画像 %>
+    
+    <%# 商品名 %>
+    <div class="manual-name">
+      <div class="manual-title-text">
+        商品名
+      </div>
+      <div class="indispensable">
+        必須
+      </div>
+      <%= f.text_area :manual_name, class:"manual-name-input", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+    </div>
+    <%# /商品名 %>
+
+    <%# 型番 %>
+    <div class="manual-number">
+      <div class="manual-title-text">
+        商品の型番
+      </div>
+      <div class="indispensable">
+        必須
+      </div>
+      <%= f.text_area :manual_number, class:"manual-number-input", placeholder:"商品の型番", maxlength:"100" %>
+    </div>
+    <%# /型番 %>
+
+    <%# 取扱説明書のURL %>
+    <div class="manual-url">
+      <div class="manual-title-text">
+        商品の取扱説明書のURL
+      </div>
+      <div class="indispensable">
+        必須
+      </div>
+      <%= f.text_area :manual_url, class:"manual-url-input", placeholder:"URL", maxlength:"100" %>
+    </div>
+    <%# /取扱説明書のURL %>
+
+    <%# 保証期限 %>
+    <div class="manual-assurance">
+      <div class="manual-title-text">
+        商品の保証期限
+      </div>
+      <%= f.text_area :assurance, class:"manual-assurance-input", placeholder:"保証期限", maxlength:"100" %>
+    </div>
+    <%# /保証期限 %>
+
+    <%# 商品の購入日 %>
+    <div class="manual-date">
+      <div class="manual-title-text">
+        商品の購入日
+      </div>
+      <%= f.text_area :manual_date, class:"manual-date-input", placeholder:"購入日", maxlength:"100" %>
+    </div>
+    <%# /商品の購入日 %>
+
+    <%# 商品価格 %>
+    <div class="manual-price">
+      <div class="manual-title-text">
+        商品の購入価格
+      </div>
+      <span class="sell-yen">¥</span>
+      <%= f.text_field :price, class:"manual-price-input", placeholder:"例）5000" %>
+    </div>
+    <%# /商品価格 %>
+
+    <%# メモ欄 %>
+    <div class="manual-memo">
+      <div class="manual-title-text">
+        メモ欄
+      </div>
+      <%= f.text_area :manual_memo, class:"manual-memo-input", placeholder:"メモ", rows:"7", maxlength:"1000" %>
+    </div>
+    <%# /メモ欄 %>
+
+    <%# 下部ボタン %>
+    <div class="actions">
+      <%= f.submit "登録する" ,class:"actions-btn" %>
+    </div>
+      <%=link_to 'もどる', room_path(@room), class:"back-btn" %>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>

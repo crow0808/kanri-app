@@ -4,6 +4,8 @@ class ManualsController < ApplicationController
   end
 
   def new
+    @room = Room.find(params[:room_id])
+    @manual = Manual.new
   end
 
   def create
