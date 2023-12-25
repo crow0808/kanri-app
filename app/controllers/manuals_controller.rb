@@ -1,6 +1,7 @@
 class ManualsController < ApplicationController
   def index
     @room = Room.find(params[:room_id])
+    @manual = Manual.where(room_id: params[:room_id])
   end
 
   def new

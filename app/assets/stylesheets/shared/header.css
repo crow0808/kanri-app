@@ -8,10 +8,15 @@
   margin: 0 5vw;
 }
 
-.header-left {
+.header-left a {
+  text-decoration: none;
   line-height: 100%;
   font-size: 40px;
   color: #473D38;
+}
+
+.header-left a:hover {
+  color: orange;
 }
 
 .header-center-room{
