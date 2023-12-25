@@ -21,6 +21,6 @@ class ManualsController < ApplicationController
   private
 
   def manual_params
-    params.require(:manual).permit(:manual_name, :model_number, :manual_url, :assurance, :manual_date, :price, :manual_memo).merge(user_id: current_user.id, room_id: @room.id)
+    params.require(:manual).permit(:manual_name, :model_number, :manual_url, :assurance, :manual_date, :price, :manual_memo, :image).merge(user_id: current_user.id, room_id: @room.id)
   end
 end
