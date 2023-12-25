@@ -1,3 +1,41 @@
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  height: 40px;
+  width: 300px;
+}
+
+.search-btn {
+  height: 40px;
+  width: 60px;
+  background-color: #CEC5BA;
+  border-radius: 3px;
+}
+
+.search-btn:hover {
+  color: orangered;
+  cursor: pointer;
+}
+.manual-back {
+  line-height: 35px;
+  width: 100px;
+  border: 2px solid #8E8C8C;
+  background-color: #CEC5BA;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.manual-back:hover {
+  color: orangered;
+}
+
+/* manualの登録一覧表示 */
 .manual-list {
   display: flex;
   flex-wrap: wrap;
