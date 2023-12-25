@@ -3,7 +3,7 @@
 
   <div class="manual-registration-main">
     <div class="manual-registration-title">取扱説明書の情報を入力</div>
-    <%= form_with model: @manual, url: new_room_manual_path(@room), local: true do |f| %>
+    <%= form_with model: @manual, url: room_manuals_path(@room), local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示 %>
     <%= render 'shared/error_messages', model: f.object %>
@@ -40,7 +40,7 @@
       <div class="indispensable">
         必須
       </div>
-      <%= f.text_area :manual_number, class:"manual-number-input", placeholder:"商品の型番", maxlength:"100" %>
+      <%= f.text_area :model_number, class:"manual-number-input", placeholder:"商品の型番", maxlength:"100" %>
     </div>
     <%# /型番 %>
 
@@ -61,7 +61,17 @@
       <div class="manual-title-text">
         商品の保証期限
       </div>
-      <%= f.text_area :assurance, class:"manual-assurance-input", placeholder:"保証期限", maxlength:"100" %>
+      <div class="manual-assurance-input">
+        <%= raw sprintf(
+                    f.date_select(
+                      :assurance,
+                      use_month_numbers: true,
+                      prompt:'--',
+                      start_year: 2000,
+                      end_year: (Time.now.year),
+                      date_separator: '%s'),
+                    "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>
     </div>
     <%# /保証期限 %>
 
@@ -70,7 +80,17 @@
       <div class="manual-title-text">
         商品の購入日
       </div>
-      <%= f.text_area :manual_date, class:"manual-date-input", placeholder:"購入日", maxlength:"100" %>
+      <div class="manual-date-input">
+        <%= raw sprintf(
+                    f.date_select(
+                      :manual_date,
+                      use_month_numbers: true,
+                      prompt:'--',
+                      start_year: 2000,
+                      end_year: (Time.now.year),
+                      date_separator: '%s'),
+                    "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>
     </div>
     <%# /商品の購入日 %>
 
