@@ -3,7 +3,7 @@
 
   <div class="manual-registration-main">
     <div class="manual-registration-title">取扱説明書の情報を入力</div>
-    <%= form_with model: @manual, url: room_manuals_path(@room), local: true do |f| %>
+    <%= form_with model: @manual, url: room_manuals_path(@room), id: 'new_registration', local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示 %>
     <%= render 'shared/error_messages', model: f.object %>
@@ -13,10 +13,12 @@
       <div class="manual-image-text">
         商品画像
       </div>
-      <div class="manual-image-text-sub">
-        クリックしてファイルをアップロード
-      </div>
-      <%= f.file_field :image, id:"item-image" %>
+
+      <%# 画像プレビュー表示 %>
+      <div id="previews"></div>
+      <%# /画像プレビュー表示 %>
+
+      <%= f.file_field :image %>
     </div>
     <%# /商品画像 %>
     
