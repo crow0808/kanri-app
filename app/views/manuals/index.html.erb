@@ -3,3 +3,26 @@
 <%= link_to "メニューへ", room_path(@room) %>
 
 <%= link_to "登録", new_room_manual_path(@room) %>
+
+
+
+
+<div class="manual-list">
+  <% @manual.each do |manual| %>
+    <div class="manual">
+      <div class="manual-image">
+        <% if manual.image.present? %>
+          <%= link_to image_tag(manual.image ) %> 
+        <% else %>
+          <p>画像がありません</p>
+        <% end %>
+      </div>
+      <div class="manual-name">
+        <%= link_to manual.manual_name %>
+      </div>
+      <div class="manual-user">
+        <%= link_to manual.user.name %>
+      </div>
+    </div>
+  <% end %>
+</div>
