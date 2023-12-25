@@ -1,0 +1,68 @@
+.manual-registration-main {
+  width: 100%;
+  padding: 0 300px;
+  background-color: antiquewhite;
+}
+
+/* 保証期限 */
+.manual-assurance-input {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.manual-assurance-input select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.manual-assurance-input p {
+  line-height: 60px;
+  padding: 0 5px;
+}
+
+
+
+
+/* 購入日 */
+.manual-date-input {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.manual-date-input select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.manual-date-input p {
+  line-height: 60px;
+  padding: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

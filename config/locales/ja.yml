@@ -6,3 +6,12 @@ ja:
       room:
         room_name: ルーム名
         room_password: パスコード
+      manual:
+        manual_name: 商品名
+        model_number: 型番
+        manual_url: 取扱説明書のURL
+        assurance: 保証期限
+        manual_date: 購入日
+        price: 購入価格
+        manual_memo: メモ
+

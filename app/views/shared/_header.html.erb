@@ -3,7 +3,7 @@
     Kanri
   </div>
   <div class="header-center-room">ルーム名</div>
-  <div class="header-center-room_name"><%= link_to @room.room_name, edit_room_path %></div>
+  <div class="header-center-room_name"><%= link_to @room.room_name, edit_room_path(@room) %></div>
   <div class="header-center-room-">ルームパス</div>
   <div class="header-center-room_pass"><%= @room.room_password %></div>
   <div class="header-right-user">ユーザー名</div>
