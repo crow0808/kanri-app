@@ -21,7 +21,7 @@
         <% end %>
       </div>
       <div class="manual-name">
-        <%= link_to manual.manual_name %>
+        <%= link_to manual.manual_name, room_manual_path(@room, manual) %>
       </div>
       <div class="manual-user">
         <%= link_to manual.user.name %>

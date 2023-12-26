@@ -19,6 +19,11 @@ class ManualsController < ApplicationController
     end
   end
 
+  def show
+    @room = Room.find(params[:room_id])
+    @manual = Manual.find(params[:id])
+  end
+
   private
 
   def manual_params
