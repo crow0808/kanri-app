@@ -76,6 +76,10 @@
   cursor: pointer;
 }
 
+.btn {
+  margin-bottom: 20px;
+}
+
 /* エラーメッセージ */
 #error_explanation {
   color: red;

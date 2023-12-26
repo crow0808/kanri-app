@@ -1,7 +1,7 @@
 class ManualsController < ApplicationController
   def index
     @room = Room.find(params[:room_id])
-    @manual = Manual.where(room_id: params[:room_id])
+    @manual = Manual.where(room_id: params[:room_id]).order('created_at DESC')
   end
 
   def new
@@ -17,6 +17,11 @@ class ManualsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @room = Room.find(params[:room_id])
+    @manual = Manual.find(params[:id])
   end
 
   private

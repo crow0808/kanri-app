@@ -17,11 +17,11 @@
         <% if manual.image.present? %>
           <%= link_to image_tag(manual.image ) %> 
         <% else %>
-          <p>画像がありません</p>
+          <%= link_to image_tag("user-image.jpg"), "#" %>
         <% end %>
       </div>
       <div class="manual-name">
-        <%= link_to manual.manual_name %>
+        <%= link_to manual.manual_name, room_manual_path(@room, manual) %>
       </div>
       <div class="manual-user">
         <%= link_to manual.user.name %>

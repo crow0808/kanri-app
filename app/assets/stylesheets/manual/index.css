@@ -17,7 +17,6 @@
 }
 
 .search-btn:hover {
-  color: orangered;
   cursor: pointer;
 }
 .manual-back {
@@ -29,10 +28,6 @@
   color: black;
   text-align: center;
   margin-left: 100px;
-}
-
-.manual-back:hover {
-  color: orangered;
 }
 
 /* manualの登録一覧表示 */

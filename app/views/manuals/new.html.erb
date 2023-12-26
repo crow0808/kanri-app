@@ -2,7 +2,7 @@
 
 
   <div class="manual-registration-main">
-    <div class="manual-registration-title">取扱説明書の情報を入力</div>
+    <div class="manual-registration-title">情報を入力</div>
     <%= form_with model: @manual, url: room_manuals_path(@room), id: 'new_registration', local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示 %>
@@ -63,7 +63,7 @@
                       :assurance,
                       use_month_numbers: true,
                       prompt:'--',
-                      start_year: (Time.now.year - 10),
+                      start_year: (Time.now.year + 10),
                       end_year: (Time.now.year),
                       date_separator: '%s'),
                     "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
