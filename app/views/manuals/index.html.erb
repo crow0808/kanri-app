@@ -17,7 +17,7 @@
         <% if manual.image.present? %>
           <%= link_to image_tag(manual.image ) %> 
         <% else %>
-          <p>画像がありません</p>
+          <%= link_to image_tag("user-image.jpg"), "#" %>
         <% end %>
       </div>
       <div class="manual-name">

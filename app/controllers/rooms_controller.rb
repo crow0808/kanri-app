@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to room_path(@room), notice: 'ルームを作成しました'
+      redirect_to room_path(@room)
     else
       render :new, status: :unprocessable_entity
     end
@@ -25,7 +25,7 @@ class RoomsController < ApplicationController
 
   def update
     if @room.update(room_params)
-      redirect_to room_path(@room), notice: 'ルームは正常に更新されました'
+      redirect_to room_path(@room)
     else
       render :edit, status: :unprocessable_entity
     end

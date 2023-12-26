@@ -1,7 +1,7 @@
 class ManualsController < ApplicationController
   def index
     @room = Room.find(params[:room_id])
-    @manual = Manual.where(room_id: params[:room_id])
+    @manual = Manual.where(room_id: params[:room_id]).order('created_at DESC')
   end
 
   def new
