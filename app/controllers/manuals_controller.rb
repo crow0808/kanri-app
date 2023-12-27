@@ -38,6 +38,10 @@ class ManualsController < ApplicationController
     redirect_to room_manuals_path(@room, @manual)
   end
 
+  def search
+    @manual = Manual.search(params[:keyword])
+  end
+
   private
 
   def set_room

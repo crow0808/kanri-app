@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :rooms do
     get 'join', to: 'join#index'
     post 'join', to: 'join#join'
-    resources :manuals
+    resources :manuals do
+      collection do
+        get 'search'
+      end
+    end
   end
 end

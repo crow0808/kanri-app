@@ -5,4 +5,12 @@ class Manual < ApplicationRecord
 
   validates :manual_name, presence: true
   validates :price, numericality: { only_integer: true, message: 'は半角数字で入力してください' }, allow_blank: true
+
+  def self.search(search)
+    if search != ''
+      Manual.where('manual_name LIKE(?)', "%#{search}%")
+    else
+      Manual.all
+    end
+  end
 end
