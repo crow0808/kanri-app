@@ -1,12 +1,15 @@
 <%= render "shared/header" %>
 
 <div class="search">
+  <div class="search-left"></div>
   <%= form_with do |form| %>
     <%= form.text_field :keyword, placeholder: "商品名で検索する", class: "search-input" %>
     <%= form.submit "検索", class: "search-btn" %>
   <% end %>
-  <%= link_to "メニューへ", room_path(@room), class: "manual-back" %>
-  <%= link_to "登録", new_room_manual_path(@room), class: "manual-back" %>
+  <div class="search-right">
+    <div class="manual-back"><%= link_to "メニューへ", room_path(@room) %></div>
+    <div class="manual-back"><%= link_to "登録", new_room_manual_path(@room) %></div>
+  </div>
 </div>
 
 
@@ -15,9 +18,9 @@
     <div class="manual">
       <div class="manual-image">
         <% if manual.image.present? %>
-          <%= link_to image_tag(manual.image ) %> 
+          <%= link_to image_tag(manual.image), room_manual_path(@room, manual) %> 
         <% else %>
-          <%= link_to image_tag("user-image.jpg"), "#" %>
+          <%= link_to image_tag("user-image.jpg"), room_manual_path(@room, manual) %>
         <% end %>
       </div>
       <div class="manual-name">

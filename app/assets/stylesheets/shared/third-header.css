@@ -8,23 +8,38 @@
   margin: 0 5vw;
 }
 
-.third-header-left a {
+.third-header-left {
+  width: 33%;
+}
+
+.third-header-center {
+  width: 33%;
+  text-align: center;
+}
+
+.third-header-center a {
   text-decoration: none;
   line-height: 100%;
   font-size: 40px;
   color: #473D38;
 }
 
-.third-header-left a:hover {
+.third-header-center a:hover {
   color: orange;
 }
 
-.third-header-right-user{
+.third-header-right {
+  width: 33%;
+  margin-left: 50px;
+}
+
+.third-header-right-user {
   font-size: 14px;
   color: #473D38;
 }
 
 .third-header-right-user_name a {
+  margin-left: 60px;
   text-decoration: none;
   color: #473D38;
   font-size: 20px;
