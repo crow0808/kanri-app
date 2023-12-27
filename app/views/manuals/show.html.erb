@@ -3,8 +3,9 @@
 <div class="show-main">
   <div class="show-name"><%= @manual.manual_name %></div>
   <div class="show-btn">
-    <div class="show-edit-btn"><%= link_to "編集", edit_room_manual_path(@room, @manual) %></div>
-    <div class="show-destroy-btn"><%= link_to "削除する", room_manual_path(@room, @manual), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %></div>
+    <div class="show-manual-btn"><%= link_to "編集", edit_room_manual_path(@room, @manual) %></div>
+    <div class="show-manual-btn"><%= link_to "もどる", room_manuals_path(@room, @manual) %></div>
+    <div class="show-manual-btn"><%= link_to "削除する", room_manual_path(@room, @manual), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %></div>
   </div>
   <div class="show-main-sub">
     <div class="show-image">
@@ -14,10 +15,6 @@
         <%= image_tag("user-image.jpg") %>
       <% end %>
     </div>
-
-
-
-
     <div class="detail-table">
         <div class="detail-tables">
           <div class="detail-item">登録者</div>
