@@ -1,0 +1,47 @@
+.show-main {
+  width: 100%;
+}
+
+.show-name {
+  width: 100%;
+  font-size: 40px;
+  color: #473D38;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.show-image {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.show-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+/* テーブル内 */
+.detail-table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.detail-item {
+  height: 50px;
+  width: 30%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+.detail-value {
+  height: 50px;
+  width: 70%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}

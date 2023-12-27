@@ -1,9 +1,10 @@
 <%= render "shared/header" %>
 
+<div class="edit-main">
 
   <div class="manual-registration-main">
     <div class="manual-registration-title">情報を入力</div>
-    <%= form_with model: @manual, url: room_manuals_path(@room), id: 'new_registration', local: true do |f| %>
+    <%= form_with model: @manual, url: room_manual_path(@room, @manual), id: 'new_registration', local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示 %>
     <%= render 'shared/error_messages', model: f.object %>
@@ -111,9 +112,12 @@
 
     <%# 下部ボタン %>
     <div class="actions">
-      <%= f.submit "登録する" ,class:"actions-btn" %>
+      <%= f.submit "更新" ,class:"actions-btn" %>
     </div>
-      <%=link_to 'もどる', room_path(@room), class:"back-btn" %>
+      <%=link_to 'もどる', :back, class:"back-btn" %>
     <%# /下部ボタン %>
     <% end %>
   </div>
+
+
+</div>
