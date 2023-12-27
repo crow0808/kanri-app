@@ -8,32 +8,57 @@
   margin: 0 5vw;
 }
 
-.header-left a {
+.header-left {
+  width: 33%;
+}
+
+.header-center {
+  width: 33%;
+  text-align: center;
+}
+
+.header-center a {
   text-decoration: none;
   line-height: 100%;
   font-size: 40px;
   color: #473D38;
 }
 
-.header-left a:hover {
+.header-center a:hover {
   color: orange;
 }
 
-.header-center-room{
+.header-right {
+  width: 33%;
+  display: flex;
+}
+
+.header-right-room{
   font-size: 14px;
   color: #473D38;
 }
 
-.header-center-room_name a {
+.header-right-room_name a {
   text-decoration: none;
   color: #473D38;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 60px;
 }
 
-.header-center-room_name a:hover {
+.header-right-room_name a:hover {
   color: orange;
 }
+
+
+
+
+
+.header-right-item-user {
+  margin-left: 30px;
+}
+
+
 
 .header-right-user{
   font-size: 14px;
@@ -45,6 +70,7 @@
   color: #473D38;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 60px;
 }
 
 .header-right-user_name a:hover {

@@ -1,8 +1,10 @@
 <header class="third-header">
-  <div class="third-header-left">
+  <div class="third-header-left"></div>
+  <div class="third-header-center">
     <%= link_to "Kanri", root_path %>
   </div>
-  <div class="third-header-right-user">ユーザー名</div>
-  <div class="third-header-right-user_name"><%= link_to current_user.name, edit_user_path(current_user) %></div>
-
+  <div class="third-header-right">
+    <div class="third-header-right-user">ユーザー名</div>
+    <div class="third-header-right-user_name"><%= link_to current_user.name, edit_user_path(current_user) %></div>
+  </div>
 </header>
