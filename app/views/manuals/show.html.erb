@@ -10,7 +10,8 @@
     <% end %>
   </div>
 
-  <%= link_to "編集", edit_room_manual_path(@room, @manual) %>
+  <%= link_to "編集", edit_room_manual_path(@room, @manual) %><br>
+  <%= link_to "削除する", room_manual_path(@room, @manual), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>
 
 
 

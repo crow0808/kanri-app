@@ -39,6 +39,13 @@ class ManualsController < ApplicationController
     end
   end
 
+  def destroy
+    @room = Room.find(params[:room_id])
+    @manual = Manual.find(params[:id])
+    @manual.destroy
+    redirect_to room_manuals_path(@room, @manual)
+  end
+
   private
 
   def manual_params
