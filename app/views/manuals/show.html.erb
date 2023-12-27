@@ -38,7 +38,7 @@
         <div class="detail-tables">
           <div class="detail-item">取扱説明書のURL</div>
           <% if @manual.manual_url.present? %>
-            <div class="detail-value"><%= @manual.manual_url %></div>
+            <div class="detail-value"><%= link_to @manual.manual_url, @manual.manual_url, target: "_blank" %></div>
           <% else %>
             <div class="detail-value">データがありません</div>
           <% end %>
