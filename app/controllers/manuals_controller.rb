@@ -24,6 +24,21 @@ class ManualsController < ApplicationController
     @manual = Manual.find(params[:id])
   end
 
+  def edit
+    @room = Room.find(params[:room_id])
+    @manual = Manual.find(params[:id])
+  end
+
+  def update
+    @room = Room.find(params[:room_id])
+    @manual = Manual.find(params[:id])
+    if @manual.update(manual_params)
+      redirect_to room_manuals_path(@room, @manual)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def manual_params
