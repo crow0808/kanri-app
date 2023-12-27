@@ -1,5 +1,6 @@
 .show-main {
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .show-name {
@@ -10,14 +11,55 @@
   margin: 30px 0;
 }
 
+.show-btn {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.show-edit-btn {
+  width: 100px;
+  line-height: 35px;
+  text-align: center;
+  border: 2px solid #8E8C8C;
+  background-color: #CEC5BA;
+  margin-right: 20px;
+}
+
+.show-edit-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.show-destroy-btn {
+  width: 100px;
+  line-height: 35px;
+  text-align: center;
+  border: 2px solid #8E8C8C;
+  background-color: #CEC5BA;
+  margin-left: 20px;
+}
+
+.show-destroy-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.show-main-sub {
+  width: 100%;
+  display: flex;
+}
+
 .show-image {
-  width: 50%;
-  margin: 0 auto;
+  width: 20%;
+  margin: 50px 50px;
   margin-bottom: 30px;
   object-fit: cover;
 }
 
 .show-image img {
+  height: 200px;
   width: 100%;
   object-fit: cover;
 }
@@ -26,22 +68,49 @@
 
 /* テーブル内 */
 .detail-table {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
+.detail-tables {
+  display: flex;
+}
+
 .detail-item {
-  height: 50px;
-  width: 30%;
+  width: 180px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  border-bottom: none;
+  font-size: 14px;
+}
+
+.detail-value {
+  width: 80%;
+  line-height: 50px;
+  padding: 0 15px;
+  border: 1px solid #dedede;
+  border-left: none;
+  border-bottom: none;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.detail-items {
+  width: 180px;
+  line-height: 150px;
+  text-align: center;
   background-color: #eee;
   border: 1px solid #dedede;
   font-size: 14px;
 }
 
-.detail-value {
-  height: 50px;
-  width: 70%;
-  padding: 20px;
+.detail-values {
+  width: 80%;
+  line-height: 30px;
+  padding: 0 15px;
   border: 1px solid #dedede;
+  border-left: none;
   font-size: 14px;
 }
