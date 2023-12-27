@@ -6,6 +6,7 @@ FactoryBot.define do
     model_number { '213abc' }
     manual_url { Faker::Internet.url }
     assurance { Faker::Date.birthday }
+    manual_date { Faker::Date.birthday }
     price { Faker::Number.number(digits: 4) }
     manual_memo { 'メモ欄です' }
     after(:build) do |item|
