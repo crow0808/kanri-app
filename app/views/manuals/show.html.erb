@@ -1,44 +1,77 @@
 <%= render "shared/header" %>
 
+<div class="show-main">
+  <div class="show-name"><%= @manual.manual_name %></div>
+  <div class="show-image">
+    <% if @manual.image.present? %>
+      <%= image_tag(@manual.image ) %> 
+    <% else %>
+      <%= image_tag("user-image.jpg") %>
+    <% end %>
+  </div>
 
 
-<table class="detail-table">
-  <tbody>
-    <tr>
-      <th class="detail-item">登録者</th>
-      <td class="detail-value"><%= @manual.user.name %></td>
-    </tr>
-    <tr>
-      <th class="detail-item">商品名</th>
-      <td class="detail-value"><%= @manual.manual_name %></td>
-    </tr>
-    <tr>
-      <th class="detail-item">型番</th>
-        <% if @manual.manual_name.present? %>
+
+
+  <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-item">登録者</th>
+        <td class="detail-value"><%= @manual.user.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">商品名</th>
+        <td class="detail-value"><%= @manual.manual_name %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">型番</th>
+        <% if @manual.model_number.present? %>
           <td class="detail-value"><%= @manual.model_number %></td>
         <% else %>
           <td class="detail-value">データがありません</td>
         <% end %>
-    </tr>
-    <tr>
-      <th class="detail-item">取扱説明書のURL</th>
-      <td class="detail-value"><%= @manual.manual_url %></td>
-    </tr>
-    <tr>
-      <th class="detail-item">保証期限</th>
-      <td class="detail-value"><%= @manual.assurance %></td>
-    </tr>
-    <tr>
-      <th class="detail-item">購入日</th>
-      <td class="detail-value"><%= @manual.manual_date %></td>
-    </tr>
-    <tr>
-      <th class="detail-item">購入価格</th>
-      <td class="detail-value"><%= @manual.price %></td>
-    </tr>
-    <tr>
-      <th class="detail-item">メモ</th>
-      <td class="detail-value"><%= @manual.manual_memo %></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+      <tr>
+        <th class="detail-item">取扱説明書のURL</th>
+        <% if @manual.manual_url.present? %>
+          <td class="detail-value"><%= @manual.manual_url %></td>
+        <% else %>
+          <td class="detail-value">データがありません</td>
+        <% end %>
+      </tr>
+      <tr>
+        <th class="detail-item">保証期限</th>
+        <% if @manual.assurance.present? %>
+          <td class="detail-value"><%= @manual.assurance %></td>
+        <% else %>
+          <td class="detail-value">データがありません</td>
+        <% end %>
+      </tr>
+      <tr>
+        <th class="detail-item">購入日</th>
+        <% if @manual.manual_date.present? %>
+          <td class="detail-value"><%= @manual.manual_date %></td>
+        <% else %>
+          <td class="detail-value">データがありません</td>
+        <% end %>
+      </tr>
+      <tr>
+        <th class="detail-item">購入価格</th>
+        <% if @manual.price.present? %>
+          <td class="detail-value"><%= @manual.price %></td>
+        <% else %>
+          <td class="detail-value">データがありません</td>
+        <% end %>
+      </tr>
+      <tr>
+        <th class="detail-item">メモ</th>
+        <% if @manual.manual_memo.present? %>
+          <td class="detail-value"><%= @manual.manual_memo %></td>
+        <% else %>
+          <td class="detail-value">データがありません</td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
