@@ -39,7 +39,11 @@ class ManualsController < ApplicationController
   end
 
   def search
-    @manual = Manual.search(params[:keyword])
+    if params[:keyword].present?
+      @manual = Manual.where('manual_name LIKE(?)', "%#{params[:keyword]}%")
+    else
+      @manual = Manual.where(room_id: params[:room_id]).order('created_at DESC')
+    end
   end
 
   private
