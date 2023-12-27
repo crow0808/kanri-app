@@ -18,30 +18,16 @@
   margin-bottom: 40px;
 }
 
-.show-edit-btn {
+.show-manual-btn {
   width: 100px;
   line-height: 35px;
   text-align: center;
   border: 2px solid #8E8C8C;
   background-color: #CEC5BA;
-  margin-right: 20px;
+  margin: 0 20px;
 }
 
-.show-edit-btn a {
-  text-decoration: none;
-  color: black;
-}
-
-.show-destroy-btn {
-  width: 100px;
-  line-height: 35px;
-  text-align: center;
-  border: 2px solid #8E8C8C;
-  background-color: #CEC5BA;
-  margin-left: 20px;
-}
-
-.show-destroy-btn a {
+.show-manual-btn a {
   text-decoration: none;
   color: black;
 }

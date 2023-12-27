@@ -13,7 +13,7 @@ class ManualsController < ApplicationController
   def create
     @manual = Manual.new(manual_params)
     if @manual.save
-      redirect_to room_path(@room), notice: '登録しました'
+      redirect_to room_manuals_path(@room, @manual)
     else
       render :new, status: :unprocessable_entity
     end
