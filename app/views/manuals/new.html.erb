@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-
+<div class="new-main">
   <div class="manual-registration-main">
     <div class="manual-registration-title">情報を入力</div>
     <%= form_with model: @manual, url: room_manuals_path(@room), id: 'new_registration', local: true do |f| %>
@@ -10,7 +10,7 @@
 
     <%# 商品画像 %>
     <div class="manual-image">
-      <div class="manual-image-text">
+      <div class="manual-title-text">
         商品画像
       </div>
 
@@ -18,7 +18,7 @@
       <div id="previews"></div>
       <%# /画像プレビュー表示 %>
 
-      <%= f.file_field :image %>
+      <div class="manual-img"><%= f.file_field :image %></div>
     </div>
     <%# /商品画像 %>
     
@@ -110,10 +110,13 @@
     <%# /メモ欄 %>
 
     <%# 下部ボタン %>
-    <div class="actions">
-      <%= f.submit "登録する" ,class:"actions-btn" %>
+    <div class="manual-form-btn">
+      <%= f.submit "登録する" ,class:"manual-btn" %>
     </div>
-      <%=link_to 'もどる', room_path(@room), class:"back-btn" %>
+    <div class="manual-back-btn">
+      <%=link_to 'もどる', :back %>
+    </div>
     <%# /下部ボタン %>
     <% end %>
   </div>
+</div>

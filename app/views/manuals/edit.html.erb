@@ -19,7 +19,7 @@
       <div id="previews"></div>
       <%# /画像プレビュー表示 %>
 
-      <%= f.file_field :image %>
+      <div class="manual-img"><%= f.file_field :image %></div>
     </div>
     <%# /商品画像 %>
     
@@ -111,10 +111,12 @@
     <%# /メモ欄 %>
 
     <%# 下部ボタン %>
-    <div class="actions">
-      <%= f.submit "更新" ,class:"actions-btn" %>
+    <div class="manual-form-btn">
+      <%= f.submit "更新" ,class:"manual-btn" %>
     </div>
-      <%=link_to 'もどる', :back, class:"back-btn" %>
+    <div class="manual-back-btn">
+      <%=link_to 'もどる', :back %>
+    </div>
     <%# /下部ボタン %>
     <% end %>
   </div>

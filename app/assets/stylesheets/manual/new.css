@@ -1,35 +1,35 @@
-.manual-registration-main {
+.new-main {
   width: 100%;
-  padding: 0 300px;
+  padding: 50px 0;
+  background-color: #F5F5F3;
 }
 
-
-
-
+.manual-registration-main {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+}
 
 .manual-registration-title {
-  font-size: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px 0;
+  color: #473D38;
+}
+
+.manual-title-text {
   font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.manual-image {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 
 /* 画像プレビュー */
@@ -42,16 +42,74 @@
   width: 120px;
   text-align: center;
   border: solid 1px #767676;
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
   margin-bottom: 5px;
   background-color: #EFEFEF;
+  margin: 0 auto;
+}
+
+
+.manual-img {
+  width: 100%;
+  padding-left: 230px;
+}
+
+
+
+
+/* 商品名 */
+.manual-name {
+  text-align: center;
+}
+
+.manual-name-input {
+  height: 40px;
+  width: 300px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: none;
+}
+
+
+/* 型番 */
+.manual-number {
+  text-align: center;
+}
+
+.manual-number-input {
+  height: 40px;
+  width: 300px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: none;
+}
+
+/* 取説のURL */
+.manual-url {
+  text-align: center;
+}
+
+.manual-url-input {
+  height: 40px;
+  width: 300px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical;
 }
 
 /* 保証期限 */
+.manual-assurance {
+  text-align: center;
+}
+
+
 .manual-assurance-input {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .manual-assurance-input select {
@@ -75,9 +133,13 @@
 
 
 /* 購入日 */
+.manual-date {
+  text-align: center;
+}
+
 .manual-date-input {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .manual-date-input select {
@@ -98,15 +160,62 @@
 }
 
 
+/* 購入価格 */
+.manual-price {
+  text-align: center;
+}
+
+.manual-price-input {
+  height: 40px;
+  width: 200px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: none;
+}
+
+/* メモ */
+.manual-memo {
+  text-align: center;
+}
+
+.manual-memo-input {
+  width: 300px;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical;
+}
+
+.manual-form-btn {
+  margin: 30px 0;
+  text-align: center;
+
+}
+
+.manual-btn {
+  width: 50%;
+  background-color: #DAD7D6;
+  border: 2px solid #8E8C8C;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
 
+.manual-back-btn {
+  height: 40px;
+  width: 40%;
+  background-color: #DAD7D6;
+  border: 2px solid #8E8C8C;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
 
-
-
-
-
-
-
-
-
-
+.manual-back-btn a {
+  text-decoration: none;
+  color: black;
+  line-height: 40px;
+}
