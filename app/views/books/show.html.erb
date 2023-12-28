@@ -1,0 +1,37 @@
+<%= render "shared/header" %>
+
+<div class="show-main">
+  <div class="show-name"><%= @book.book_name %></div>
+  <div class="show-btn">
+    <div class="show-manual-btn"><%= link_to "編集", edit_room_book_path(@room, @book) %></div>
+    <div class="show-manual-btn"><%= link_to "もどる", room_books_path(@room, @book) %></div>
+    <div class="show-manual-btn"><%= link_to "削除する", room_book_path(@room, @book), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %></div>
+  </div>
+  <div class="show-main-sub">
+    <div class="show-image">
+      <% if @book.image.present? %>
+        <%= image_tag(@book.image ) %> 
+      <% else %>
+        <%= image_tag("user-image.jpg") %>
+      <% end %>
+    </div>
+    <div class="detail-table">
+        <div class="detail-tables">
+          <div class="detail-item">登録者</div>
+          <div class="detail-value"><%= @book.user.name %></div>
+        </div>
+        <div class="detail-tables">
+          <div class="detail-item">所得巻数</div>
+          <div class="detail-value"><%= @book.book_number %></div>
+        </div>
+        <div class="detail-tables">
+          <div class="detail-items">メモ</div>
+          <% if @book.book_memo.present? %>
+            <div class="detail-values"><%= simple_format(@book.book_memo) %></div>
+          <% else %>
+            <div class="detail-values">データがありません</div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>

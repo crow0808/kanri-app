@@ -52,6 +52,11 @@
   margin-top: 50px;
 }
 
+.room-book a {
+  text-decoration: none;
+  color: black;
+}
+
 .room-item {
   line-height: 48px;
   width: 200px;

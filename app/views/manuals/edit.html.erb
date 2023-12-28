@@ -1,7 +1,6 @@
 <%= render "shared/header" %>
 
 <div class="edit-main">
-
   <div class="manual-registration-main">
     <div class="manual-registration-title">情報を入力</div>
     <%= form_with model: @manual, url: room_manual_path(@room, @manual), id: 'new_registration', local: true do |f| %>
@@ -120,6 +119,4 @@
     <%# /下部ボタン %>
     <% end %>
   </div>
-
-
 </div>
