@@ -6,11 +6,16 @@ class BooksController < ApplicationController
   end
 
   def new
-
+    @book = Book.new
   end
 
   def create
-
+    @book = Book.new(book_params)
+    if @book.save
+      redirect_to room_books_path(@room, @book)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show
@@ -40,6 +45,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-
+    params.require(:book).permit(:book_name, :book_number, :book_memo, :image).merge(user_id: current_user.id, room_id: @room.id)
   end
 end
