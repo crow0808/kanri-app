@@ -6,10 +6,16 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @item = Item.new
   end
 
   def create
-
+    @item = Item.new(item_params)
+    if @item.save
+      redirect_to room_items_path(@room, @item)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show
@@ -36,5 +42,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
+    params.require(:item).permit(:item_name, :item_memo, :image).merge(user_id: current_user.id, room_id: @room.id)
   end
 end

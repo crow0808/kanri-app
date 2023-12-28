@@ -8,7 +8,7 @@
   <% end %>
   <div class="search-right">
     <div class="manual-back"><%= link_to "メニューへ", room_path(@room) %></div>
-    <div class="manual-back"><%= link_to "登録", new_room_book_path(@room) %></div>
+    <div class="manual-back"><%= link_to "登録", new_room_item_path(@room) %></div>
   </div>
 </div>
 
@@ -23,7 +23,7 @@
         <% end %>
       </div>
       <div class="manual-name">
-        <%= link_to ietm.item_name, room_ietm_path(@room, item) %>
+        <%= link_to item.item_name, room_item_path(@room, item) %>
       </div>
       <div class="manual-user">
         <%= item.user.name %>
