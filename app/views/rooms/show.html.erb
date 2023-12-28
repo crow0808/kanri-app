@@ -13,7 +13,7 @@
     <% end %>
     <div class="room-manual"><%= link_to "取説一覧ページ", room_manuals_path(@room) %></div>
     <div class="room-book"><%= link_to "漫画一覧ページ", room_books_path(@room) %></div>
-    <div class="room-item">その他アイテム一覧ページ</div>
+    <div class="room-item"><%= link_to "その他アイテム一覧ページ", room_items_path(@room) %></div>
     <%= link_to "ルーム一覧ページ", rooms_path %>
   </div>
 

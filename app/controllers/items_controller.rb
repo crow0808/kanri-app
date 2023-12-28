@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_room
 
   def index
+    @item = Item.where(room_id: params[:room_id]).order('created_at DESC')
   end
 
   def new
