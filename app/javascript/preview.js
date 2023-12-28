@@ -46,7 +46,7 @@ document.addEventListener('turbo:load', function(){
         deletePreviewImage.remove();
       }
 
-      const deleteFileField = document.querySelector('input[type="file"][name="manual[image]"]');
+      const deleteFileField = document.querySelector('input[type="file"][name="manual[image]"], input[type="file"][name="book[image]"], input[type="file"][name="item[image]"]');
       if (deleteFileField) {
         deleteFileField.value = null;
       }
