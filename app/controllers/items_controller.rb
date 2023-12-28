@@ -26,7 +26,11 @@ class ItemsController < ApplicationController
   end
 
   def update
-
+    if @item.update(item_params)
+      redirect_to room_items_path(@room, @item)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
