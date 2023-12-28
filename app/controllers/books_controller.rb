@@ -23,11 +23,14 @@ class BooksController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
-
+    if @book.update(book_params)
+      redirect_to room_books_path(@room, @book)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy

@@ -21,15 +21,9 @@
           <div class="detail-value"><%= @book.user.name %></div>
         </div>
         <div class="detail-tables">
-          <div class="detail-item">漫画名</div>
-          <div class="detail-value"><%= @book.book_name %></div>
-        </div>
-        <div class="detail-tables">
           <div class="detail-item">所得巻数</div>
           <div class="detail-value"><%= @book.book_number %></div>
         </div>
- 
-
         <div class="detail-tables">
           <div class="detail-items">メモ</div>
           <% if @book.book_memo.present? %>

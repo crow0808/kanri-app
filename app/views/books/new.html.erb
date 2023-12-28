@@ -30,7 +30,7 @@
       <div class="indispensable">
         必須
       </div>
-      <%= f.text_area :book_name, class:"manual-name-input", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :book_name, class:"manual-name-input", placeholder:"漫画名（必須 40文字まで)", maxlength:"40" %>
     </div>
     <%# /漫画名 %>
 
@@ -38,6 +38,9 @@
     <div class="manual-number">
       <div class="manual-title-text">
         所得巻数
+      </div>
+      <div class="indispensable">
+        必須
       </div>
       <%= f.text_field :book_number, class:"manual-number-input", placeholder:"巻数", maxlength:"100" %>
     </div>
