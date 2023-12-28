@@ -11,8 +11,14 @@
         <%= notice %>
       </div>
     <% end %>
-    
+
     <div class="user-room-header">マイルーム一覧</div>
+
+    <% current_user.rooms.each do |room| %>
+      <div class="room-name">
+        <%= link_to room.room_name, room_path(room) %>
+      </div>
+    <% end %>
 
     <div class="room-page-create">
       <div class="room-btn">
@@ -22,12 +28,5 @@
         <%= link_to "ルームに参加", room_join_path(current_user) %>
       </div>
     </div>
-
-    <% current_user.rooms.each do |room| %>
-      <div class="room-name">
-        <%= link_to room.room_name, room_path(room) %>
-      </div>
-    <% end %>
   </div>
-
 </div>
