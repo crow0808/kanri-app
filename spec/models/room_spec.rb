@@ -42,6 +42,13 @@ RSpec.describe Room, type: :model do
         @room.valid?
         expect(@room.errors.full_messages).to include('パスコードは4文字の半角数字で入力してください')
       end
+      it 'room_nameとroom_passwordの組み合わせがすでに存在する場合は作成できない' do
+        new_room = FactoryBot.create(:room, room_name: 'TestRoom', room_password: '1234')
+        @room.room_name = 'TestRoom'
+        @room.room_password = '1234'
+        @room.valid?
+        expect(@room.errors.full_messages).to include('ルーム名とこのパスコードの組み合わせはすでに存在します')
+      end
     end
   end
 end
