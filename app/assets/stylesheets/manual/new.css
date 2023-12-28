@@ -21,8 +21,16 @@
   color: #473D38;
 }
 
+.error {
+  text-align: center;
+}
+
 .manual-title-text {
   font-weight: bold;
+}
+
+.indispensable {
+  color: red;
 }
 
 .manual-image {

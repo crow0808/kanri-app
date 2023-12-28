@@ -1,5 +1,4 @@
 
-
 /* ページ右側 */
 .room-form-main {
   height: 100%;
@@ -8,10 +7,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.error {
-  text-align: center;
 }
 
 .room-form-header {
