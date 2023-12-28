@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_room
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
     @item = Item.where(room_id: params[:room_id]).order('created_at DESC')
@@ -39,6 +40,7 @@ class ItemsController < ApplicationController
   end
 
   def set_item
+    @item = Item.find(params[:id])
   end
 
   def item_params
