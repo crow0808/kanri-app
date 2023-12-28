@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :set_room
 
   def index
-
+    @book = Book.where(room_id: params[:room_id]).order('created_at DESC')
   end
 
   def new

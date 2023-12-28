@@ -1,0 +1,34 @@
+<%= render "shared/header" %>
+
+<div class="search">
+  <div class="search-left"></div>
+  <%= form_with(url: search_room_manuals_path, local: true, method: :get) do |form| %>
+    <%= form.text_field :keyword, placeholder: "商品名で検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+  <div class="search-right">
+    <div class="manual-back"><%= link_to "メニューへ", room_path(@room) %></div>
+    <div class="manual-back"><%= link_to "登録", new_room_book_path(@room) %></div>
+  </div>
+</div>
+
+
+<div class="manual-list">
+  <% @book.each do |book| %>
+    <div class="manual">
+      <div class="manual-image">
+        <% if book.image.present? %>
+          <%= link_to image_tag(book.image), room_manual_path(@room, book) %> 
+        <% else %>
+          <%= link_to image_tag("user-image.jpg"), room_manual_path(@room, book) %>
+        <% end %>
+      </div>
+      <div class="manual-name">
+        <%= link_to book.manual_name, room_manual_path(@room, book) %>
+      </div>
+      <div class="manual-user">
+        <%= book.user.name %>
+      </div>
+    </div>
+  <% end %>
+</div>
