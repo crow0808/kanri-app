@@ -19,14 +19,14 @@
         <% if book.image.present? %>
           <%= link_to image_tag(book.image), room_book_path(@room, book) %> 
         <% else %>
-          <%= link_to image_tag("user-image.jpg"), room_book_path(@room, book) %>
+          <%= link_to image_tag("sample.png"), room_book_path(@room, book) %>
         <% end %>
       </div>
       <div class="manual-name">
         <%= link_to book.book_name, room_book_path(@room, book) %>
       </div>
       <div class="manual-user">
-        <%= book.user.name %>
+        所持巻数：<%= book.book_number %>巻
       </div>
     </div>
   <% end %>

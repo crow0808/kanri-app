@@ -14,6 +14,10 @@ RSpec.describe Book, type: :model do
         @book.book_memo = ''
         expect(@book).to be_valid
       end
+      it 'release_dateは空でも保存できること' do
+        @book.release_date = ''
+        expect(@book).to be_valid
+      end
       it '画像は空でも保存できること' do
         @book.image = nil
         expect(@book).to be_valid

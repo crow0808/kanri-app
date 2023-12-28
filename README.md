@@ -70,6 +70,7 @@
 | room         | references | null: false, foreign_key: true |
 | book_name    | string     | null: false                    |
 | book_number  | integer    | null: false                    |
+| release_date | date       |                                |
 | book_memo    | text       |                                |
 
 ### Association

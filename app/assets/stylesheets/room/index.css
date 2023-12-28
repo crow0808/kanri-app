@@ -33,27 +33,6 @@
   margin-top: 30px;
 }
 
-.room-page-create {
-  width: 60%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.room-btn a {
-  display: inline-block;
-  height: 48px;
-  width: 10vw;
-  text-decoration: none;
-  text-align: center;
-  line-height: 48px;
-  color: black;
-  background: #DAD7D6;
-  border: 2px solid #8E8C8C;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 30px;
-}
-
 .room-name a {
   display: inline-block;
   height: 48px;
@@ -67,4 +46,20 @@
   font-size: 14px;
   cursor: pointer;
   margin-top: 30px;
+}
+
+.room-page-create {
+  width: 60%;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.room-btn a {
+  display: inline-block;
+  height: 20px;
+  width: 10vw;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
 }
