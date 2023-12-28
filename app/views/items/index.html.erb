@@ -19,7 +19,7 @@
         <% if item.image.present? %>
           <%= link_to image_tag(item.image), room_item_path(@room, item) %> 
         <% else %>
-          <%= link_to image_tag("user-image.jpg"), room_item_path(@room, item) %>
+          <%= link_to image_tag("sample.png"), room_item_path(@room, item) %>
         <% end %>
       </div>
       <div class="manual-name">
