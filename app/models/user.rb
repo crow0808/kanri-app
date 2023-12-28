@@ -11,5 +11,5 @@ class User < ApplicationRecord
   has_many :items
 
   validates :name, presence: true
-  validates :password, format: { with: /\A[0-9a-zA-Z]+\z/, message: 'は半角英数字のみ使用できます' }
+  validates :password, format: { with: /\A[0-9a-zA-Z]+\z/, message: 'は半角英数字のみ使用できます' }, on: :create
 end
