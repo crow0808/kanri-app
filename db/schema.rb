@@ -44,6 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_28_045650) do
     t.bigint "room_id", null: false
     t.string "book_name", null: false
     t.integer "book_number", null: false
+    t.date "release_date"
     t.text "book_memo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

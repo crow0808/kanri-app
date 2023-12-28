@@ -25,6 +25,14 @@
           <div class="detail-value"><%= @book.book_number %>巻</div>
         </div>
         <div class="detail-tables">
+          <div class="detail-item">次巻発売予定日</div>
+          <% if @book.release_date.present? %>
+            <div class="detail-value"><%= @book.release_date %></div>
+          <% else %>
+            <div class="detail-value">データがありません</div>
+          <% end %>
+        </div>
+        <div class="detail-tables">
           <div class="detail-items">メモ</div>
           <% if @book.book_memo.present? %>
             <div class="detail-values"><%= simple_format(@book.book_memo) %></div>
