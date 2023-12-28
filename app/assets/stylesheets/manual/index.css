@@ -7,6 +7,10 @@
 
 .search-left {
   width: 30%;
+  color: #473D38;
+  font-size: 25px;
+  font-weight: bold;
+  padding-left: 30px;
 }
 
 .search-input {
