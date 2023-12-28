@@ -49,14 +49,10 @@
   margin: 0 auto;
 }
 
-
 .manual-img {
   width: 100%;
-  padding-left: 230px;
+  padding-left: 220px;
 }
-
-
-
 
 /* 商品名 */
 .manual-name {
@@ -71,7 +67,6 @@
   border-radius: 3px;
   resize: none;
 }
-
 
 /* 型番 */
 .manual-number {
@@ -128,9 +123,6 @@
   line-height: 60px;
   padding: 0 5px;
 }
-
-
-
 
 /* 購入日 */
 .manual-date {
