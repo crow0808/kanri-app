@@ -38,6 +38,14 @@ class BooksController < ApplicationController
     redirect_to room_books_path(@room, @book)
   end
 
+  def search
+    if params[:keyword].present?
+      @book = Book.where('book_name LIKE(?)', "%#{params[:keyword]}%")
+    else
+      @book = Book.where(room_id: params[:room_id]).order('created_at DESC')
+    end
+  end
+
   private
 
   def set_room
