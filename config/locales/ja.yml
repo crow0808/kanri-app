@@ -14,4 +14,8 @@ ja:
         manual_date: 購入日
         price: 購入価格
         manual_memo: メモ
+      book:
+        book_name: 漫画名
+        book_number: 所持巻数
+        book_memo: メモ
 

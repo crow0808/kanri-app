@@ -5,8 +5,8 @@ RSpec.describe Manual, type: :model do
     @manual = FactoryBot.build(:manual)
   end
 
-  describe '商品の出品登録' do
-    context '出品登録ができるとき' do
+  describe '取扱説明書の登録' do
+    context '登録ができるとき' do
       it '全ての入力事項が、存在すれば登録できる' do
         expect(@manual).to be_valid
       end
@@ -39,7 +39,7 @@ RSpec.describe Manual, type: :model do
         expect(@manual).to be_valid
       end
     end
-    context '出品登録ができないとき' do
+    context '登録ができないとき' do
       it 'user情報がない場合は登録できない' do
         @manual.user = nil
         @manual.valid?
