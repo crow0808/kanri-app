@@ -1,0 +1,56 @@
+<%= render "shared/header" %>
+
+<div class="edit-main">
+  <div class="manual-registration-main">
+    <div class="manual-registration-title">情報を入力</div>
+    <%= form_with model: @item, url: room_item_path(@room, @item), id: 'new_registration', local: true do |f| %>
+
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示 %>
+    <div class="error">
+      <%= render 'shared/error_messages', model: f.object %>
+    </div>
+    
+    <%# 商品画像 %>
+    <div class="manual-image">
+      <div class="manual-image-text">
+        商品画像
+      </div>
+
+      <%# 画像プレビュー表示 %>
+      <div id="previews"></div>
+      <%# /画像プレビュー表示 %>
+
+      <div class="manual-img"><%= f.file_field :image %></div>
+    </div>
+    <%# /商品画像 %>
+    
+    <%# 漫画名 %>
+    <div class="manual-name">
+      <div class="manual-title-text">
+        漫画名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :item_name, class:"manual-name-input", placeholder:"漫画名（必須 40文字まで)", maxlength:"40" %>
+    </div>
+    <%# /漫画名 %>
+
+    <%# メモ欄 %>
+    <div class="manual-memo">
+      <div class="manual-title-text">
+        メモ欄
+      </div>
+      <%= f.text_area :item_memo, class:"manual-memo-input", placeholder:"メモ", rows:"7", maxlength:"1000" %>
+    </div>
+    <%# /メモ欄 %>
+
+    <%# 下部ボタン %>
+    <div class="manual-form-btn">
+      <%= f.submit "更新" ,class:"manual-btn" %>
+    </div>
+    <div class="manual-back-btn">
+      <%=link_to 'もどる', :back %>
+    </div>
+    <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>

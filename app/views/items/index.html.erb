@@ -1,33 +1,32 @@
 <%= render "shared/header" %>
 
 <div class="search">
-  <div class="search-left">取扱説明書一覧</div>
-  <%= form_with(url: search_room_manuals_path, local: true, method: :get) do |form| %>
+  <div class="search-left">その他アイテム一覧</div>
+  <%= form_with(url: search_room_items_path, local: true, method: :get) do |form| %>
     <%= form.text_field :keyword, placeholder: "商品名で検索する", class: "search-input" %>
     <%= form.submit "検索", class: "search-btn" %>
   <% end %>
   <div class="search-right">
     <div class="manual-back"><%= link_to "メニューへ", room_path(@room) %></div>
-    <div class="manual-back"><%= link_to "登録", new_room_manual_path(@room) %></div>
+    <div class="manual-back"><%= link_to "登録", new_room_item_path(@room) %></div>
   </div>
 </div>
 
-
 <div class="manual-list">
-  <% @manual.each do |manual| %>
+  <% @item.each do |item| %>
     <div class="manual">
       <div class="manual-image">
-        <% if manual.image.present? %>
-          <%= link_to image_tag(manual.image), room_manual_path(@room, manual) %> 
+        <% if item.image.present? %>
+          <%= link_to image_tag(item.image), room_item_path(@room, item) %> 
         <% else %>
-          <%= link_to image_tag("user-image.jpg"), room_manual_path(@room, manual) %>
+          <%= link_to image_tag("user-image.jpg"), room_item_path(@room, item) %>
         <% end %>
       </div>
       <div class="manual-name">
-        <%= link_to manual.manual_name, room_manual_path(@room, manual) %>
+        <%= link_to item.item_name, room_item_path(@room, item) %>
       </div>
       <div class="manual-user">
-        <%= manual.user.name %>
+        <%= item.user.name %>
       </div>
     </div>
   <% end %>

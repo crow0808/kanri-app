@@ -1,0 +1,33 @@
+<%= render "shared/header" %>
+
+<div class="show-main">
+  <div class="show-name"><%= @item.item_name %></div>
+  <div class="show-btn">
+    <div class="show-manual-btn"><%= link_to "編集", edit_room_item_path(@room, @item) %></div>
+    <div class="show-manual-btn"><%= link_to "もどる", room_items_path(@room, @item) %></div>
+    <div class="show-manual-btn"><%= link_to "削除する", room_item_path(@room, @item), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %></div>
+  </div>
+  <div class="show-main-sub">
+    <div class="show-image">
+      <% if @item.image.present? %>
+        <%= image_tag(@item.image ) %> 
+      <% else %>
+        <%= image_tag("user-image.jpg") %>
+      <% end %>
+    </div>
+    <div class="detail-table">
+        <div class="detail-tables">
+          <div class="detail-item">登録者</div>
+          <div class="detail-value"><%= @item.user.name %></div>
+        </div>
+        <div class="detail-tables">
+          <div class="detail-items">メモ</div>
+          <% if @item.item_memo.present? %>
+            <div class="detail-values"><%= simple_format(@item.item_memo) %></div>
+          <% else %>
+            <div class="detail-values">データがありません</div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>

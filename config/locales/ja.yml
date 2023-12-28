@@ -18,4 +18,7 @@ ja:
         book_name: 漫画名
         book_number: 所持巻数
         book_memo: メモ
+      item:
+        item_name: 商品名
+        item_memo: メモ
 

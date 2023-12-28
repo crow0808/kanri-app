@@ -10,7 +10,7 @@ RSpec.describe Book, type: :model do
       it '全ての入力事項が、存在すれば登録できる' do
         expect(@book).to be_valid
       end
-      it 'manual_memoは空でも保存できること' do
+      it 'book_memoは空でも保存できること' do
         @book.book_memo = ''
         expect(@book).to be_valid
       end
