@@ -6,8 +6,10 @@
     <%= form_with model: @manual, url: room_manual_path(@room, @manual), id: 'new_registration', local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示 %>
-    <%= render 'shared/error_messages', model: f.object %>
-
+    <div class="error">
+      <%= render 'shared/error_messages', model: f.object %>
+    </div>
+    
     <%# 商品画像 %>
     <div class="manual-image">
       <div class="manual-image-text">

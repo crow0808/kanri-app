@@ -8,7 +8,7 @@ FactoryBot.define do
     assurance { Faker::Date.birthday }
     manual_date { Faker::Date.birthday }
     price { Faker::Number.number(digits: 4) }
-    manual_memo { 'メモ欄です' }
+    manual_memo { Faker::Lorem.characters(number: 30) }
     after(:build) do |item|
       item.image.attach(io: File.open('public/images/test_image.jpg'), filename: 'test_image.jpg')
     end

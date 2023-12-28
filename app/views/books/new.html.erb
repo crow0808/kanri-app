@@ -6,7 +6,9 @@
     <%= form_with model: @book, url: room_books_path(@room), id: 'new_registration', local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示 %>
-    <%= render 'shared/error_messages', model: f.object %>
+    <div class="error">
+      <%= render 'shared/error_messages', model: f.object %>
+    </div>
 
     <%# 商品画像 %>
     <div class="manual-image">
@@ -34,17 +36,17 @@
     </div>
     <%# /漫画名 %>
 
-    <%# 所得巻数 %>
+    <%# 所持巻数 %>
     <div class="manual-number">
       <div class="manual-title-text">
-        所得巻数
+        所持巻数
       </div>
       <div class="indispensable">
         必須
       </div>
       <%= f.text_field :book_number, class:"manual-number-input", placeholder:"巻数", maxlength:"100" %>
     </div>
-    <%# /所得巻数 %>
+    <%# /所持巻数 %>
 
     <%# メモ欄 %>
     <div class="manual-memo">

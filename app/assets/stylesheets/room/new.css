@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.error {
+  text-align: center;
+}
+
 .room-form-header {
   font-size: 30px;
   padding-bottom: 10px;
