@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :rooms, through: :room_users
   has_many :manuals
   has_many :books
+  has_many :items
 
   validates :name, presence: true
 end
