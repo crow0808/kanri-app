@@ -38,6 +38,14 @@ class ItemsController < ApplicationController
     redirect_to room_items_path(@room, @item)
   end
 
+  def search
+    if params[:keyword].present?
+      @item = Item.where('item_name LIKE(?)', "%#{params[:keyword]}%")
+    else
+      @item = Item.where(room_id: params[:room_id]).order('created_at DESC')
+    end
+  end
+
   private
 
   def set_room
