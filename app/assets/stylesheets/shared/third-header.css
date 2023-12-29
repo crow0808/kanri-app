@@ -17,20 +17,15 @@
   text-align: center;
 }
 
-.third-header-center a {
-  text-decoration: none;
-  line-height: 100%;
-  font-size: 40px;
-  color: #473D38;
-}
-
-.third-header-center a:hover {
-  color: orange;
+.third-header-center img {
+  height: 12vh;
+  width: 300px;
+  object-fit: cover;
 }
 
 .third-header-right {
   width: 33%;
-  margin-left: 50px;
+  padding-left: 50px;
 }
 
 .third-header-right-user {
