@@ -74,7 +74,7 @@
 
     <%# 下部ボタン %>
     <div class="manual-form-btn">
-      <%= f.submit "登録する" ,class:"manual-btn" %>
+      <%= f.submit "登録する" ,class:"manual-btn", data: { "turbo" => false } %>
     </div>
     <div class="manual-back-btn">
       <%=link_to 'もどる', :back %>
