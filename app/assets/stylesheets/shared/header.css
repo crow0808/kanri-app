@@ -17,15 +17,10 @@
   text-align: center;
 }
 
-.header-center a {
-  text-decoration: none;
-  line-height: 100%;
-  font-size: 40px;
-  color: #473D38;
-}
-
-.header-center a:hover {
-  color: orange;
+.header-center img {
+  height: 12vh;
+  width: 300px;
+  object-fit: cover;
 }
 
 .header-right {
@@ -50,15 +45,9 @@
   color: orange;
 }
 
-
-
-
-
 .header-right-item-user {
   margin-left: 30px;
 }
-
-
 
 .header-right-user{
   font-size: 14px;

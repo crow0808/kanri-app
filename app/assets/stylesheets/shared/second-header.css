@@ -9,8 +9,12 @@
 }
 
 .second-header-main {
-  line-height: 100%;
-  font-size: 40px;
-  color: #473D38;
+  text-align: center;
+}
+
+.second-header-main img {
+  height: 12vh;
+  width: 300px;
+  object-fit: cover;
 }
 
