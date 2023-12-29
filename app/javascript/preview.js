@@ -19,6 +19,13 @@ document.addEventListener('turbo:load', function(){
       alreadyPreview.remove();
     };
 
+    // プレビュー画像が表示されるときに非表示にする要素を取得
+    const previewBefore = document.querySelector('.preview-before');
+    if (previewBefore) {
+      // プレビュー画像がある場合は非表示にする
+      previewBefore.style.display = 'none';
+    }
+
     const file = e.target.files[0];
     const blob = window.URL.createObjectURL(file);
 

@@ -17,6 +17,13 @@
       </div>
 
       <%# 画像プレビュー表示 %>
+      <div class="preview-before">
+        <% if @item.image.present? %>
+          <%= image_tag(@item.image ) %> 
+        <% else %>
+          <%= image_tag("sample.png") %>
+        <% end %>
+      </div>
       <div id="previews"></div>
       <%# /画像プレビュー表示 %>
 
@@ -24,15 +31,15 @@
     </div>
     <%# /商品画像 %>
     
-    <%# 漫画名 %>
+    <%# 商品名 %>
     <div class="manual-name">
       <div class="manual-title-text">
-        漫画名
+        商品名
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :item_name, class:"manual-name-input", placeholder:"漫画名（必須 40文字まで)", maxlength:"40" %>
     </div>
-    <%# /漫画名 %>
+    <%# /商品名 %>
 
     <%# メモ欄 %>
     <div class="manual-memo">
@@ -45,7 +52,7 @@
 
     <%# 下部ボタン %>
     <div class="manual-form-btn">
-      <%= f.submit "更新" ,class:"manual-btn" %>
+      <%= f.submit "更新" ,class:"manual-btn", data: { "turbo" => false } %>
     </div>
     <div class="manual-back-btn">
       <%=link_to 'もどる', :back %>
