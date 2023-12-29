@@ -26,6 +26,50 @@
   align-items: center;
 }
 
+/* 設定アイコンのスタイル */
+#settingsIcon {
+  width: 45px;
+  height: 35px;
+  cursor: pointer;
+  position: absolute;
+  top: 15vh;
+  right: 50px;
+}
+
+/* 初期状態で非表示にするクラス */
+.hidden {
+  display: none;
+}
+
+/* 設定リストのスタイル */
+#settingsList {
+  position: absolute;
+  top: 21vh;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 設定リストの各項目に区切り線を追加 */
+#settingsList li {
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+/* 設定リストの各項目に区切り線を追加 */
+#settingsList li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 最後の項目には区切り線を表示しない */
+#settingsList li:last-child {
+  border-bottom: none;
+}
+
 .user-room-header {
   font-size: 30px;
   padding-bottom: 10px;
