@@ -17,6 +17,13 @@
       </div>
 
       <%# 画像プレビュー表示 %>
+      <div class="preview-before">
+        <% if @item.image.present? %>
+          <%= image_tag(@item.image ) %> 
+        <% else %>
+          <%= image_tag("sample.png") %>
+        <% end %>
+      </div>
       <div id="previews"></div>
       <%# /画像プレビュー表示 %>
 
