@@ -66,7 +66,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'rubocop', require: false
-
+  gem 'letter_opener_web'
 end
 
 group :test do
@@ -86,3 +86,4 @@ gem 'devise'
 gem 'rails-i18n'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
+gem 'whenever', require: false
