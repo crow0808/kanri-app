@@ -1,93 +1,61 @@
-# テーブル設計
+## アプリケーション名
+CANLEY
 
-## users テーブル
+## アプリケーション概要
+取扱説明書を管理、共有することができる。  
+保証期限を登録しておくと期限１ヶ月前に通知メールが届く。  
+また、漫画やその他のアイテムも管理、共有することができる。  
+漫画には、次巻発売日を登録しておくと前日に通知メールが届く。
 
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| name               | string | null: false |
-| email              | string | null: false |
-| encrypted_password | string | null: false |
+## URL
+https://kanriapp.onrender.com
 
-### Association
+## テスト用アカウント
+Basic認証ID：admin  
+Basic認証パスワード：2222  
+ニックネーム：tester  
+メールアドレス：test@test.com  
+パスワード：a11111  
 
-- has_many :room_users
-- has_many :rooms, through: :room_users
-- has_many :manuals
-- has_many :books
-- has_many :items
+## 利用方法
 
-## rooms テーブル
+### ログイン・新規登録する
+1.ログイン画面から、ログインまたは、新規登録を行う  
 
-| Column          | Type   | Options     |
-| --------------- | ------ | ----------- |
-| room_name       | string | null: false |
-| room_password   | string | null: false |
+### ルームに入る
+1.ルーム一覧ページに表示されているルームを選択しクリックする  
+2.ルーム未作成の場合、ルーム作成ページに移動し「ルーム名」「パスコード」を入力しルームを作成する  
+3.他のユーザーが管理しているルームに参加する場合、ルーム参加ページから、ルーム名、パスコードを入力し、一致すればルームに参加できる
 
-### Association
+### 取扱説明書を管理・共有する
+1.取説一覧ページに移動し、登録ボタンから取扱説明書を登録する  
+2.一覧ページに表示されている、登録アイテムをクリックし登録内容の詳細の確認、編集、削除を行う  
+3.保証期限を登録した場合は、期限一ヶ月前にメール通知が届く
 
-- has_many :room_users
-- has_many :users, through: :room_users
-- has_many :manuals
-- has_many :books
-- has_many :items
+### 漫画を管理・共有する
+1.漫画一覧ページに移動し、登録ボタンから漫画を登録する  
+2.一覧ページに表示されている、登録アイテムをクリックし登録内容の詳細の確認、編集、削除を行う  
+3.次巻発売予定日を登録した場合は、予定日前日にメール通知が届く
 
-## room_users テーブル
+### その他のアイテムを管理・共有する
+1.その他アイテム一覧ページに移動し、登録ボタンからアイテムを登録する  
+2.一覧ページに表示されている、登録アイテムをクリックし登録内容の詳細の確認、編集、削除を行う  
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
 
-### Association
 
-- belongs_to :room
-- belongs_to :user
+## アプリケーションを作成した背景
+自分自身が身近に感じていた課題として、取扱説明書の管理があった。なんとなく捨てれずにファイルに入れ保管していたが、どんどんかさばってしまい、必要なときは必要としている取扱説明書を探すのも一苦労だった。家族や友人にヒヤリングしたところ、同じような課題を抱えていることが判明した。また、既存のアプリケーションでは、登録した内容を他のユーザーと共有することができないため使用しなかったとの意見があった。  
+同様の問題を抱えている方も多いと推測し、課題を解決するために、取扱説明書をベースとしたアイテム管理、共有アプリケーションを開発することにした。
 
-## manuals テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| user         | references | null: false, foreign_key: true |
-| room         | references | null: false, foreign_key: true |
-| manual_name  | string     | null: false                    |
-| model_number | string     |                                |
-| manual_url   | string     |                                |
-| assurance    | date       |                                |
-| manual_date  | date       |                                |
-| price        | integer    |                                |
-| manual_memo  | text       |                                |
 
-### Association
+## データベース設計
+[![Image from Gyazo](https://i.gyazo.com/1178c8c1b5353f8ebb60ea25ac001836.png)](https://gyazo.com/1178c8c1b5353f8ebb60ea25ac001836)
 
-- belongs_to :room
-- belongs_to :user
 
-## books テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| user         | references | null: false, foreign_key: true |
-| room         | references | null: false, foreign_key: true |
-| book_name    | string     | null: false                    |
-| book_number  | integer    | null: false                    |
-| release_date | date       |                                |
-| book_memo    | text       |                                |
+## 工夫したポイント
+１つ目は、共有機能。ユーザーごとのアイテム管理ではなく、ルームごとでのアイテム管理にすることで、ルームに参加することで簡単にデータ共有できるようにした。これにより既存のアプリケーションとの差別化することができた。  
+２つ目は、検索機能。一覧ページに検索機能を実装したことで、課題であったアイテムを探す手間を削減することができた。  
+３つ目は、アイテム登録時の画像プレビュー表示。ファイル名だけではどの画像を選択したか分かりづらいため、JavaScriptを書き、画像選択したら画像プレビューが表示されるようにした。また、画像プレビューの下に削除ボタンも用意し、ユーザーの操作性向上を期待した。
 
-### Association
-
-- belongs_to :room
-- belongs_to :user
-
-## items テーブル
-
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| user         | references | null: false, foreign_key: true |
-| room         | references | null: false, foreign_key: true |
-| item_name    | string     | null: false                    |
-| item_memo    | text       |                                |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
