@@ -67,6 +67,7 @@
   background-color: #CEC5BA;
   border-radius: 5px;
   padding: 25px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.3);
 }
 
 .manual-image img {
