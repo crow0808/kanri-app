@@ -1,0 +1,20 @@
+/* app/assets/stylesheets/room/show */
+
+/* メンバー一覧 */
+.users-list-header {
+  font-size: 30px;
+  color: #735E59;
+  margin-top: 30px;
+}
+
+.users-list {
+  margin: 10px 0 30px 0;
+}
+
+.user-list {
+  line-height: 48px;
+  width: 200px;
+  border: 2px solid #8E8C8C;
+  text-align: center;
+  margin-top: 30px;
+}

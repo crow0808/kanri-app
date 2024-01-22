@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :rooms do
     get 'join', to: 'join#index'
     post 'join', to: 'join#join'
+    member do
+      get 'show_users'
+    end
     resources :manuals do
       collection do
         get 'search'

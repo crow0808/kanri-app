@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: [:show, :edit, :update, :destroy]
+  before_action :set_room, only: [:show, :edit, :update, :destroy, :show_users]
 
   def index
   end
@@ -34,6 +34,9 @@ class RoomsController < ApplicationController
   def destroy
     @room.destroy
     redirect_to rooms_path, notice: 'ルームは削除されました'
+  end
+
+  def show_users
   end
 
   private

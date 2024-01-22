@@ -1,0 +1,25 @@
+<%= render "shared/header" %>
+
+<div class="room-main">
+  <div class="room-page-left">
+    <%= link_to image_tag("user-image.jpg", class:"room-page-image"), "#" %>
+  </div>
+
+  <div class="room-show-right">
+    <%# 設定ボタン %>
+    <%= image_tag("setting.jpg", id: "settingsIcon") %>
+    <ul id="settingsList" class="hidden">
+      <li><%= link_to "ユーザーの編集", edit_user_path(current_user) %></li>
+      <li><%= link_to "ルームの編集", edit_room_path(@room) %></li>
+    </ul>
+
+    <div class="users-list-header">ルームメンバー</div>
+    <ul class="users-list">
+      <% @room.users.each do |user| %>
+        <li class="user-list"><%= user.name %></li>
+      <% end %>
+    </ul>
+
+    <%= link_to "戻る", room_path %>
+  </div>
+</div>
